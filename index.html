@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kubra Mart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 120px;
+            letter-spacing: 10px;
+            font-weight: bolder;
+            font-family: "Fredoka", serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+
+        h6 {
+            font-size: 20px;
+            letter-spacing: 2px;
+            font-weight: bolder;
+            font-style: normal;
+        }
+
+        .highlight {
+            color: purple;
+        }
+
+        .loader-container {
+            width: 300px;
+            height: 10px;
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Progress Bar Animation */
+        .loader-bar {
+            width: 0;
+            height: 10px;
+            background-color: purple;
+            animation: load 3s ease-in-out infinite;
+        }
+
+        @keyframes load {
+            0% {
+                width: 0;
+            }
+
+            50% {
+                width: 40%;
+            }
+
+            100% {
+                width: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div
+        style="width: 100%; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: lavender;">
+        <h1>Kubra <span style="color: purple;">Mart</span></h1>
+        <br />
+        <br />
+        <h6>Under <span style="color: purple;">Developement</span></h6>
+        <div class="loader-container"></div>
+        <div class="loader-bar"></div>
+    </div>
+    </div>
+</body>
+
+</html>
