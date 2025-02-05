@@ -15,9 +15,26 @@
             box-sizing: border-box;
         }
 
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: lavender;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
         h1 {
-            font-size: 120px;
-            letter-spacing: 10px;
+            font-size: 8vw;
+            letter-spacing: 5px;
             font-weight: bolder;
             font-family: "Fredoka", serif;
             font-optical-sizing: auto;
@@ -25,10 +42,9 @@
         }
 
         h6 {
-            font-size: 20px;
+            font-size: 3vw;
             letter-spacing: 2px;
-            font-weight: bolder;
-            font-style: normal;
+            font-weight: bold;
         }
 
         .highlight {
@@ -36,7 +52,8 @@
         }
 
         .loader-container {
-            width: 300px;
+            width: 80%;
+            max-width: 300px;
             height: 10px;
             background-color: #ddd;
             border-radius: 5px;
@@ -44,10 +61,9 @@
             position: relative;
         }
 
-        /* Progress Bar Animation */
         .loader-bar {
             width: 0;
-            height: 10px;
+            height: 100%;
             background-color: purple;
             animation: load 3s ease-in-out infinite;
         }
@@ -58,26 +74,50 @@
             }
 
             50% {
-                width: 40%;
+                width: 70%;
             }
 
             100% {
                 width: 0;
             }
         }
+
+        /* Media Queries for Smaller Screens */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 10vw;
+                letter-spacing: 3px;
+            }
+
+            h6 {
+                font-size: 4vw;
+            }
+
+            .loader-container {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 12vw;
+                letter-spacing: 2px;
+            }
+
+            h6 {
+                font-size: 5vw;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <div
-        style="width: 100%; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: lavender;">
-        <h1>Kubra <span style="color: purple;">Mart</span></h1>
-        <br />
-        <br />
-        <h6>Under <span style="color: purple;">Developement</span></h6>
-        <div class="loader-container"></div>
-        <div class="loader-bar"></div>
-    </div>
+    <div class="container">
+        <h1>Kubra <span class="highlight">Mart</span></h1>
+        <h6>Under <span class="highlight">Development</span></h6>
+        <div class="loader-container">
+            <div class="loader-bar"></div>
+        </div>
     </div>
 </body>
 
